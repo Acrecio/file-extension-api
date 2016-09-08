@@ -24,5 +24,7 @@ All available routes are using the ```/v1``` prefix for versioning. If you want 
 
 ## credits
 
-Thanks to [FilExt](http://filext.com/) for providing the raw data
-Thanks to [TJ Holowaychuk](https://github.com/tjholowaychuk) for Koa
+- Thanks to [FilExt](http://filext.com/) for providing the raw data
+- Thanks to [TJ Holowaychuk](https://github.com/tjholowaychuk) for Koa
+
+[@FlyersWeb](https://www.flyers-web.org)
