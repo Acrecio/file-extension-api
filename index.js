@@ -3,7 +3,6 @@
 import koa from 'koa'
 import db from 'sqlite'
 import route from 'koa-route'
-import Promise from 'bluebird'
 
 const DATABASE_PATH = "./database/database.sqlite"
 

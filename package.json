@@ -17,7 +17,6 @@
   "author": "Flyers",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.4.6",
     "koa": "^1.2.4",
     "koa-route": "^2.4.2",
     "sqlite": "^2.2.0"
