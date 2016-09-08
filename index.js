@@ -21,6 +21,10 @@ app.use(route.get('/v1/classifications', function*(){
   this.body = yield db.all("SELECT classification FROM Files WHERE classification IS NOT NULL GROUP BY classification")
 }))
 
+app.use(route.get('/v1/companies', function*(){
+  this.body = yield db.all("SELECT company FROM Files WHERE company IS NOT NULL GROUP BY company")
+}))
+
 app.use(route.get('/v1/search/name/:name', function*(name){
   this.body = yield db.all("SELECT * FROM Files WHERE name LIKE ?", `%${name}%`)
 }))
