@@ -1,8 +1,10 @@
 'use strict';
 
+import fs from 'fs'
 import koa from 'koa'
-import db from 'sqlite'
 import route from 'koa-route'
+import db from 'sqlite'
+import marked from 'marked'
 
 const DATABASE_PATH = "./database/database.sqlite"
 
@@ -11,6 +13,11 @@ const SERVER_IP = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1"
 
 const app = koa()
 db.open(DATABASE_PATH, db.OPEN_READONLY)
+
+app.use(route.get('/', function*(){
+  const readme = fs.readFileSync("README.md")
+  this.body = marked(readme.toString())
+}))
 
 //// OpenShift specific
 app.use(route.get('/health', function*(){

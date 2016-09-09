@@ -1,6 +1,9 @@
 # File Extension API
 A File extension classification API because it didn't exists
 
+## demo
+See the [OpenShift APP](http://filextensionapi-flyers.rhcloud.com/) for an example, you could also deploy it on your server
+
 ## install
 
 ```
