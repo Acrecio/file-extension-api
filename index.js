@@ -7,6 +7,7 @@ import route from 'koa-route'
 const DATABASE_PATH = "./database/database.sqlite"
 
 const SERVER_PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080
+const SERVER_IP = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1"
 
 const app = koa()
 db.open(DATABASE_PATH, db.OPEN_READONLY)
@@ -48,4 +49,4 @@ app.use(route.get('/v1/search/classification/:classification', function*(classif
   this.body = yield db.all("SELECT * FROM Files WHERE classification = ?", `${classification}`)
 }))
 
-app.listen(SERVER_PORT)
+app.listen(SERVER_PORT, SERVER_IP)
