@@ -6,8 +6,15 @@ import route from 'koa-route'
 
 const DATABASE_PATH = "./database/database.sqlite"
 
+const SERVER_PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080
+
 const app = koa()
-db.open(DATABASE_PATH, )
+db.open(DATABASE_PATH, db.OPEN_READONLY)
+
+//// OpenShift specific
+app.use(route.get('/health', function*(){
+  this.body = 1
+}))
 
 app.use(route.get('/v1/files', function*(){
   this.body = yield db.all("SELECT * FROM Files")
@@ -41,4 +48,4 @@ app.use(route.get('/v1/search/classification/:classification', function*(classif
   this.body = yield db.all("SELECT * FROM Files WHERE classification = ?", `${classification}`)
 }))
 
-app.listen(3000)
+app.listen(SERVER_PORT)
