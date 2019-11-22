@@ -20,7 +20,7 @@ The explorer load the SQLite database to your browser, parse it thanks to SQL.js
 
 [![Buy me a coffee](https://raw.githubusercontent.com/FlyersWeb/file-extension-api/master/buy-me-a-coffee.png)](https://paypal.me/nac1dbois)
 
-I'm working on this project in my free time and offering it free of charges. To help me work more on this you send me tips to buy more coffee :)
+I'm working on this project in my free time and offering it free of charges. To help me work more on this you can send me tips to buy more coffee :)
 
 ## credits
 
