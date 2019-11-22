@@ -1,33 +1,30 @@
-# File Extension API
-A File extension classification API because it didn't exists
+# File Extension Explorer
+A File extension database explorer because it didn't exists
 
 ## demo
-See the [OpenShift APP](http://filextensionapi-flyers.rhcloud.com/) for an example, you could also deploy it on your server
+See the [GitHub Page](http://filextensionapi-flyers.rhcloud.com/) for an example.
 
-## install
+## install for devs
 
 ```
 npm install
-npm run start
+npm run start -s
 ```
-Navigate to ```http://localhost:3000/v1/files``` to see all available files
+Navigate to ```http://localhost:3000/``` to see all available files
 
-## api
+## explorer
 
-All available routes are using the ```/v1``` prefix for versioning. If you want to access a names resource you'll have to use for example ```/v1/names```
+The explorer load the SQLite database to your browser, parse it thanks to SQL.js allowing you to query the database directly from your web browser. This is done thanks to a port of [SQLite](http://sqlite.org/about.html) to Webassembly, by compiling the SQLite C code.
 
-- ```/files``` : show all available files
-- ```/names``` : show all available extensions name
-- ```/classifications``` : show all extensions categories
-- ```/companies``` : show all stored companies
-- ```/search/name/:name``` : search extensions for a specified extension name
-- ```/search/company/:company``` : search extensions for a specified company name
-- ```/search/association/:association``` : search extensions for a specified associated project
-- ```/search/classification/:classification``` : search extensions for a specified category
+## buy me a coffee
+
+[![Buy me a coffee](https://raw.githubusercontent.com/FlyersWeb/file-extension-api/sql.js/buy-me-a-coffee.png)](https://paypal.me/nac1dbois)
+
+I'm working on this project in my free time and offering it free of charges. To help me work more on this you send me tips to buy more coffee :)
 
 ## credits
 
 - Thanks to [FilExt](http://filext.com/) for providing the raw data
-- Thanks to [TJ Holowaychuk](https://github.com/tj) for Koa
+- Thanks to [Alon Zakai](https://github.com/kripken/sql.js/tree/v1.0.1) for SQL.js
 
 [@FlyersWeb](https://www.flyers-web.org)
